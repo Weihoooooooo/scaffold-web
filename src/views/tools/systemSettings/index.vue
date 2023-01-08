@@ -8,26 +8,43 @@
     label-suffix=":"
     @submit.native.prevent="doSubmit"
   >
-    <el-form-item :label="String($t('sysSetting.sysName'))" prop="sysName">
-      <el-input v-model="form.name" :placeholder="String($t('sysSetting.sysName'))" clearable class="my-input" />
+    <el-form-item :label="String($t('sysSetting.sysName'))" prop="name">
+      <el-input
+        v-model="form.name"
+        :placeholder="String($t('sysSetting.sysName'))"
+        clearable
+        class="my-input"
+      />
     </el-form-item>
-    <el-form-item :label="String($t('sysSetting.sysNameZhCn'))" prop="sysNameZhCn">
-      <el-input v-model="form.nameZhCn" :placeholder="String($t('sysSetting.sysNameZhCn'))" clearable class="my-input" />
+    <el-form-item :label="String($t('sysSetting.sysNameZhCn'))" prop="nameZhCn">
+      <el-input
+        v-model="form.nameZhCn"
+        :placeholder="String($t('sysSetting.sysNameZhCn'))"
+        clearable
+        class="my-input"
+      />
     </el-form-item>
-    <el-form-item :label="String($t('sysSetting.sysNameZhHk'))" prop="sysNameZhHk">
+    <el-form-item :label="String($t('sysSetting.sysNameZhHk'))" prop="nameZhHk">
       <el-input v-model="form.nameZhHk" :placeholder="String($t('sysSetting.sysNameZhHk'))" clearable class="my-input" />
     </el-form-item>
-    <el-form-item :label="String($t('sysSetting.sysNameZhTw'))" prop="sysNameZhTw">
+    <el-form-item :label="String($t('sysSetting.sysNameZhTw'))" prop="nameZhTw">
       <el-input v-model="form.nameZhTw" :placeholder="String($t('sysSetting.sysNameZhTw'))" clearable class="my-input" />
     </el-form-item>
-    <el-form-item :label="String($t('sysSetting.sysNameEnUs'))" prop="sysNameEnUs">
+    <el-form-item :label="String($t('sysSetting.sysNameEnUs'))" prop="nameEnUs">
       <el-input v-model="form.nameEnUs" :placeholder="String($t('sysSetting.sysNameEnUs'))" clearable class="my-input" />
     </el-form-item>
     <el-form-item :label="String($t('sysSetting.sysLogo'))" prop="sysLogo">
-      <el-input v-model="form.sysLogo" placeholder="系统Logo地址" clearable class="my-input" />
+      <el-input v-model="form.sysLogo" :placeholder="String($t('sysSetting.sysLogo'))" clearable class="my-input" />
     </el-form-item>
     <el-form-item :label="String($t('sysSetting.userInitPassword'))" prop="userInitPassword">
-      <el-input v-model="form.userInitPassword" type="password" :placeholder="String($t('sysSetting.userInitPassword'))" show-password clearable class="my-input" />
+      <el-input
+        v-model="form.userInitPassword"
+        type="password"
+        :placeholder="String($t('sysSetting.userInitPassword'))"
+        show-password
+        clearable
+        class="my-input"
+      />
     </el-form-item>
     <el-form-item>
       <el-button
@@ -50,32 +67,22 @@ export default {
   name: 'SystemSettings',
   data() {
     return {
-      form: {
-        id: null,
-        sysName: '',
-        sysNameZhCn: '',
-        sysNameZhHk: '',
-        sysNameZhTw: '',
-        sysNameEnUs: '',
-        sysLogo: '',
-        userInitPassword: ''
-      },
+      form: {},
       loading: false,
-      flag: false,
       rules: {
-        sysName: [
+        name: [
           { required: true, message: String(i18n.t('sysSetting.form.sysName')), trigger: 'blur' }
         ],
-        sysNameZhCn: [
+        nameZhCn: [
           { required: true, message: String(i18n.t('sysSetting.form.sysNameZhCn')), trigger: 'blur' }
         ],
-        sysNameZhHk: [
+        nameZhHk: [
           { required: true, message: String(i18n.t('sysSetting.form.sysNameZhHk')), trigger: 'blur' }
         ],
-        sysNameZhTw: [
+        nameZhTw: [
           { required: true, message: String(i18n.t('sysSetting.form.sysNameZhTw')), trigger: 'blur' }
         ],
-        sysNameEnUs: [
+        nameEnUs: [
           { required: true, message: String(i18n.t('sysSetting.form.sysNameEnUs')), trigger: 'blur' }
         ],
         sysLogo: [
@@ -94,7 +101,6 @@ export default {
     init() {
       getSettings().then(res => {
         this.form = res.data
-        this.flag = res.data
       })
     },
     doSubmit() {

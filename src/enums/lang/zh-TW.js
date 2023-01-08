@@ -34,6 +34,22 @@ const enumZhTW = {
   ElevatorComputerRoomEnum: {
     HAS_COMPUTER_ROOM: '有機房',
     NO_COMPUTER_ROOM: '無機房'
+  },
+  ParkTypeEnum: {
+    CAR_PARK: '小車車位',
+    OTHER_PARK: '其他車位'
+  },
+  IsBuyEnum: {
+    IS_BUY: '已購買',
+    NO_BUY: '未購買'
+  },
+  IsLiveEnum: {
+    IS_LIVE: '已居住',
+    NO_LIVE: '未居住'
+  },
+  PayEnum: {
+    UNPAID: '未支付',
+    PAID: '已支付'
   }
 }
 

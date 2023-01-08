@@ -34,6 +34,22 @@ const enumEnUS = {
   ElevatorComputerRoomEnum: {
     HAS_COMPUTER_ROOM: 'Has Computer Room',
     NO_COMPUTER_ROOM: 'No Computer Room'
+  },
+  ParkTypeEnum: {
+    CAR_PARK: 'Trolley parking spaces',
+    OTHER_PARK: 'Other parking spaces'
+  },
+  IsBuyEnum: {
+    IS_BUY: 'Purchased',
+    NO_BUY: 'Not purchased'
+  },
+  IsLiveEnum: {
+    IS_LIVE: 'Inhabited',
+    NO_LIVE: 'Uninhabited'
+  },
+  PayEnum: {
+    UNPAID: 'Unpaid',
+    PAID: 'Paid'
   }
 }
 

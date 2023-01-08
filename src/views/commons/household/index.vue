@@ -52,7 +52,7 @@
       :before-close="crud.cancelCU"
       :close-on-click-modal="false"
       append-to-body
-      width="600px"
+      width="720px"
       top="70px"
     >
       <template #title>
@@ -93,6 +93,7 @@
               :precision="2"
               step="0.01"
             />
+            <el-tag type="info" size="mini">m&sup2;</el-tag>
           </el-form-item>
           <el-form-item label="水表读数" prop="meterWater">
             <el-input-number
@@ -102,6 +103,7 @@
               :precision="2"
               step="0.01"
             />
+            <el-tag type="info" size="mini">m&sup3;</el-tag>
           </el-form-item>
           <el-form-item label="电表读数" prop="meterElectric">
             <el-input-number
@@ -111,6 +113,7 @@
               :precision="2"
               step="0.01"
             />
+            <el-tag type="info" size="mini">kwh</el-tag>
           </el-form-item>
           <el-form-item label="常住人数" prop="peopleNumber">
             <el-input-number
@@ -149,13 +152,13 @@
         <span style="color: black;font-weight: bold">{{ scope.row.identityId }}</span>
       </template>
       <template slot="area" slot-scope="scope">
-        <span style="color: red">{{ scope.row.area }}&nbsp;</span><b>m^2</b>
+        <span style="color: red">{{ scope.row.area }}&nbsp;</span><el-tag type="info" size="mini">m&sup2;</el-tag>
       </template>
       <template slot="lastMeterWater" slot-scope="scope">
-        <span style="color: red">{{ scope.row.lastMeterWater }}&nbsp;</span><b>m^3</b>
+        <span style="color: red">{{ scope.row.lastMeterWater }}&nbsp;</span><el-tag type="info" size="mini">m&sup3;</el-tag>
       </template>
       <template slot="lastMeterElectric" slot-scope="scope">
-        <span style="color: red">{{ scope.row.lastMeterElectric }}&nbsp;</span><b>kwh</b>
+        <span style="color: red">{{ scope.row.lastMeterElectric }}&nbsp;</span><el-tag type="info" size="mini">kwh</el-tag>
       </template>
       <template slot="data-operate" slot-scope="scope">
         <sw-update-delete-operation

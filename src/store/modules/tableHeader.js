@@ -149,15 +149,15 @@ const state = {
     { prop: 'identityId', label: '电梯编号', fixed: 'left', width: '150' },
     { prop: 'buildingNum', label: '所属楼宇', fixed: 'left', width: '150' },
     { prop: 'numberOfPeople', label: '核载人数', slot: true, sortable: true, width: '120' },
-    { prop: 'numberOfWeight', label: '核载重量(kg)', width: '120', slot: true, sortable: true },
+    { prop: 'numberOfWeight', label: '核载重量', width: '120', slot: true, sortable: true },
     { prop: 'isComputerRoom', label: '有无机房', slot: true },
     { prop: 'hoistwaySize', label: '井道尺寸(mm)', width: '150' },
-    { prop: 'depthOfFoundationPit', label: '基坑深度(m)', width: '120', sortable: true },
+    { prop: 'depthOfFoundationPit', label: '基坑深度', width: '120', sortable: true, slot: true },
     { prop: 'reservedSizeOfDoorOpening', label: '门洞预留尺寸(mm)', width: '150' },
-    { prop: 'liftingHeight', label: '提升高度(m)', width: '120', slot: true, sortable: true },
+    { prop: 'liftingHeight', label: '提升高度', width: '120', slot: true, sortable: true },
     { prop: 'lastMaintainTime', label: '上一次维护时间', width: '200', sortable: true },
     { prop: 'nextMaintainTime', label: '下一次维护时间', width: '200', sortable: true },
-    { prop: 'day', label: '维护间隔(天)', slot: true, width: '120', sortable: true },
+    { prop: 'day', label: '维护间隔', slot: true, width: '120', sortable: true },
     { prop: 'maintainPeople', label: '维护人', width: '150', slot: true },
     { prop: 'maintainPeoplePhone', label: '维护人电话', width: '150', slot: true },
     { prop: 'enabled', label: '是否启用', slot: true },
@@ -187,7 +187,7 @@ const state = {
     { prop: 'type', label: '车位类型', slot: true },
     { prop: 'isBuy', label: '是否被购买', slot: true },
     { prop: 'identityId', label: '车位独立编号' },
-    { prop: 'price', label: '车位价格', sortable: true },
+    { prop: 'price', label: '车位价格', sortable: true, slot: true },
     { prop: 'createTime', label: '创建时间', sortable: true, width: '200' }
   ],
   car: [
@@ -218,8 +218,23 @@ const state = {
     { prop: 'buildingNum', label: '到访楼宇' },
     { prop: 'householdVO.identityId', label: '到访梯户', slot: true },
     { prop: 'householdVO.isLive', label: '是否居住', slot: true },
-    { prop: 'createTime', label: '创建时间' },
-    { prop: 'updateTime', label: '修改时间' }
+    { prop: 'createTime', label: '创建时间', sortable: true, width: '200' },
+    { prop: 'updateTime', label: '修改时间', sortable: true, width: '200' }
+  ],
+  householdPay: [
+    { prop: 'buildingNum', label: '楼宇', fixed: 'left', slot: true },
+    { prop: 'household.identityId', label: '梯户', fixed: 'left', slot: true, width: '100' },
+    { prop: 'ownerName', label: '业主', fixed: 'left' },
+    { prop: 'payWater', label: '水费', sortable: true, slot: true, width: '150' },
+    { prop: 'payElectric', label: '电费', sortable: true, slot: true, width: '150' },
+    { prop: 'payProperty', label: '物管费', sortable: true, slot: true, width: '150' },
+    { prop: 'year', label: '年份', sortable: true },
+    { prop: 'month', label: '月份', sortable: true },
+    { prop: 'isPayWater', label: '是否支付水费', width: '150', slot: true },
+    { prop: 'isPayElectric', label: '是否支付电费', width: '150', slot: true },
+    { prop: 'isPayProperty', label: '是否支付物管费', width: '150', slot: true },
+    { prop: 'createTime', label: '创建时间', sortable: true, width: '200' },
+    { prop: 'updateTime', label: '修改时间', sortable: true, width: '200' }
   ]
 }
 

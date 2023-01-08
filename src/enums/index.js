@@ -38,16 +38,20 @@ const enumInfo = {
     NO_COMPUTER_ROOM: { value: 0, desc: i18n.t('ElevatorComputerRoomEnum.NO_COMPUTER_ROOM') }
   },
   ParkTypeEnum: {
-    CAR_PARK: { value: 0, desc: '小车车位' },
-    OTHER_PARK: { value: 1, desc: '其他车位' }
+    CAR_PARK: { value: 0, desc: i18n.t('ParkTypeEnum.CAR_PARK') },
+    OTHER_PARK: { value: 1, desc: i18n.t('ParkTypeEnum.OTHER_PARK') }
   },
   IsBuyEnum: {
-    IS_BUY: { value: 1, desc: '已购买' },
-    NO_BUY: { value: 0, desc: '未购买' }
+    IS_BUY: { value: 1, desc: i18n.t('IsBuyEnum.IS_BUY') },
+    NO_BUY: { value: 0, desc: i18n.t('IsBuyEnum.NO_BUY') }
   },
   IsLiveEnum: {
-    IS_LIVE: { value: 1, desc: '已居住' },
-    NO_LIVE: { value: 0, desc: '未居住' }
+    IS_LIVE: { value: 1, desc: i18n.t('IsLiveEnum.IS_LIVE') },
+    NO_LIVE: { value: 0, desc: i18n.t('IsLiveEnum.NO_LIVE') }
+  },
+  PayEnum: {
+    UNPAID: { value: 0, desc: i18n.t('PayEnum.UNPAID') },
+    PAID: { value: 1, desc: i18n.t('PayEnum.PAID') }
   }
 }
 

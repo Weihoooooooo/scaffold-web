@@ -218,13 +218,16 @@
             <span style="font-weight: bold;color: red">{{ scope.row.numberOfPeople }}</span>
           </template>
           <template slot="numberOfWeight" slot-scope="scope">
-            <span style="font-weight: bold;color: red">{{ scope.row.numberOfWeight }}</span>
+            <span style="font-weight: bold;color: red">{{ scope.row.numberOfWeight }}</span>&nbsp;<el-tag type="info" size="mini">kg</el-tag>
+          </template>
+          <template slot="depthOfFoundationPit" slot-scope="scope">
+            <span>{{ scope.row.depthOfFoundationPit }}</span>&nbsp;<el-tag type="info" size="mini">m</el-tag>
           </template>
           <template slot="liftingHeight" slot-scope="scope">
-            <span style="font-weight: bold">{{ scope.row.liftingHeight }}</span>
+            <span style="font-weight: bold">{{ scope.row.liftingHeight }}</span>&nbsp;<el-tag type="info" size="mini">m</el-tag>
           </template>
           <template slot="day" slot-scope="scope">
-            <span style="font-weight: bold;color: red">{{ scope.row.day }}</span>
+            <span style="font-weight: bold;color: red">{{ scope.row.day }}</span>&nbsp;<el-tag type="info" size="mini">天</el-tag>
           </template>
           <template slot="enabled" slot-scope="scope">
             <el-switch

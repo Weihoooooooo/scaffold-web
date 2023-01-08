@@ -85,6 +85,9 @@
       <template slot="region" slot-scope="scope">
         <span style="font-weight: bold;color: red">{{ scope.row.region }}</span>
       </template>
+      <template slot="price" slot-scope="scope">
+        <b>￥</b><span>{{ scope.row.price }}</span>&nbsp;<el-tag type="info" size="mini">万</el-tag>
+      </template>
       <template slot="type" slot-scope="scope">
         <el-tag v-if="scope.row.type === 0" size="mini">
           {{ $enum.getDescByValue('ParkTypeEnum',scope.row.type) }}

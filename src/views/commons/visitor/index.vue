@@ -73,7 +73,8 @@
         <span>{{ scope.row.householdVO.identityId }}</span>
       </template>
       <template slot="householdVO.isLive" slot-scope="scope">
-        <span>{{ $enum.getDescByValue('IsLiveEnum',scope.row.householdVO.isLive) }}</span>
+        <el-tag v-if="scope.row.isLive === 1" size="mini" type="success">{{ $enum.getDescByValue('IsLiveEnum',scope.row.householdVO.isLive) }}</el-tag>
+        <el-tag v-else size="mini" type="danger">{{ $enum.getDescByValue('IsLiveEnum',scope.row.householdVO.isLive) }}</el-tag>
       </template>
       <template slot="data-operate" slot-scope="scope">
         <sw-update-delete-operation

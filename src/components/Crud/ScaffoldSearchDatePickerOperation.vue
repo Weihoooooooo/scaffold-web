@@ -2,6 +2,7 @@
   <div v-if="crud.props.searchToggle">
     <slot name="left" />
     <el-input
+      v-if="!hiddenInput"
       v-model="query.blurry"
       clearable
       :placeholder="inputPlaceholder === null ? String($t('crud.searchDatePickerOperation.placeholder')) : inputPlaceholder"
@@ -41,6 +42,11 @@ export default {
   name: 'SwSearchDatePickerOperation',
   mixins: [header()],
   props: {
+    hiddenInput: {
+      type: Boolean,
+      required: false,
+      default: false
+    },
     inputPlaceholder: {
       type: String,
       required: false,
